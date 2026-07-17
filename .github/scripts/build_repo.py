@@ -62,6 +62,38 @@ def build_addons_xml(addon_xml_paths, out_path):
     return xml_str
 
 
+def write_directory_listings(root_dir):
+    """Writes an index.html per directory listing its entries.
+
+    GitHub Pages serves no directory listing of its own (a bare folder URL
+    404s without an index.html). Kodi's HTTP file-source browser needs an
+    actual browsable listing to validate a source and to enumerate zips for
+    "Install from zip file", so every directory gets one.
+    """
+    for dirpath, dirnames, filenames in os.walk(root_dir):
+        dirnames.sort()
+        entries = []
+        if os.path.abspath(dirpath) != os.path.abspath(root_dir):
+            entries.append(("../", "../"))
+        for name in dirnames:
+            entries.append((f"{name}/", f"{name}/"))
+        for name in sorted(filenames):
+            if name == "index.html":
+                continue
+            entries.append((name, name))
+
+        links = "\n".join(
+            f'<li><a href="{href}">{label}</a></li>' for href, label in entries
+        )
+        html = (
+            "<!DOCTYPE html>\n<html><head><meta charset=\"utf-8\">"
+            "<title>Index</title></head><body>\n<ul>\n"
+            f"{links}\n</ul>\n</body></html>\n"
+        )
+        with open(os.path.join(dirpath, "index.html"), "w", encoding="utf-8") as f:
+            f.write(html)
+
+
 def main():
     if os.path.exists(OUT_DIR):
         shutil.rmtree(OUT_DIR)
@@ -95,6 +127,9 @@ def main():
         f.write(md5)
 
     print(f"Wrote {addons_xml_path} (md5 {md5})")
+
+    write_directory_listings(OUT_DIR)
+    print("Wrote index.html directory listings")
 
 
 if __name__ == "__main__":
