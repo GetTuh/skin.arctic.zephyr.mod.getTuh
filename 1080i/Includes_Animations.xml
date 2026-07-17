@@ -24,7 +24,7 @@
     </include>
     
     <include name="Animation.FadeHomeRow">
-        <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml)]</visible>
+        <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml)]</visible>
         <animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" reversible="false">WindowOpen</animation>
         <animation effect="fade" start="100" end="0" tween="cubic" easing="out" time="350" reversible="false">WindowClose</animation>
         <animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" reversible="false">Visible</animation>
@@ -102,7 +102,7 @@
     
     <include name="Animation.RightSide.Vertical.Menu">
         <animation effect="slide" start="0,0" end="-300,0" time="0" condition="[Skin.HasSetting(homemenu.only.icons) + [$EXP[HomeIsVerticalMultiWidgets] | $EXP[HomeIsVerticalMultiWidgetsNetflix]]] + Skin.HasSetting(home.showicons)">Conditional</animation>
-        <visible>!Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+        <visible>!Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
         <animation type="WindowOpen" reversible="false">
             <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in"/>
             <effect type="slide" start="1920" end="0" time="350" center="auto" tween="sine" easing="out"/>
@@ -125,7 +125,7 @@
     </include>
     
     <include name="Animation.LeftSide.Vertical.Menu">
-        <visible>!Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+        <visible>!Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
         <animation type="WindowOpen" reversible="false">
             <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in"/>
             <effect type="slide" start="-1920" end="0" time="350" center="auto" tween="quadratic" easing="out"/>
@@ -612,8 +612,8 @@
     </include>
 
     <include name="Animation.FurnitureVisible">
-        <animation effect="fade" end="0" start="100" condition="Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]" time="450" delay="0" tween="sine" easing="in">Conditional</animation>
-        <animation effect="fade" end="100" start="0" condition="![Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]]" time="150">Conditional</animation>
+        <animation effect="fade" end="0" start="100" condition="Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]" time="450" delay="0" tween="sine" easing="in">Conditional</animation>
+        <animation effect="fade" end="100" start="0" condition="![Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]]" time="150">Conditional</animation>
         <animation effect="fade" end="100" start="0" time="450" delay="0" tween="sine" easing="in">WindowOpen</animation>
         <animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
         <animation effect="fade" end="100" start="0" time="450" delay="0" tween="sine" easing="in">Visible</animation>
@@ -621,8 +621,8 @@
     </include>
 
     <include name="Animation.FurnitureVisibleHomeLabel">
-        <animation effect="fade" end="0" start="100" condition="Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Control.HasFocus(301) | [Window.IsVisible(Home.xml) + !Skin.HasSetting(home.showheader)] | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]" time="450" delay="0" tween="sine" easing="in">Conditional</animation>
-        <animation effect="fade" end="100" start="0" condition="![Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Control.HasFocus(301) | [Window.IsVisible(Home.xml) + !Skin.HasSetting(home.showheader)] | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]]" time="150">Conditional</animation>
+        <animation effect="fade" end="0" start="100" condition="Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Control.HasFocus(301) | [Window.IsVisible(Home.xml) + !Skin.HasSetting(home.showheader)] | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]" time="450" delay="0" tween="sine" easing="in">Conditional</animation>
+        <animation effect="fade" end="100" start="0" condition="![Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml) | [[Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Control.HasFocus(301) | [Window.IsVisible(Home.xml) + !Skin.HasSetting(home.showheader)] | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(Custom_MovieSets.xml)]]]" time="150">Conditional</animation>
         <animation effect="fade" end="100" start="0" time="450" delay="0" tween="sine" easing="in">WindowOpen</animation>
         <animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
         <animation effect="fade" end="100" start="0" time="450" delay="0" tween="sine" easing="in">Visible</animation>
@@ -720,7 +720,7 @@
     </include>
 
     <include name="Animation.HomeIsModernMultiWidgets">
-        <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(skin.arctic.zephyr.mod.script-gto-info.xml)]</visible>
+        <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPVRInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(skin.arctic.zephyr.mod.gettuh.script-gto-info.xml)]</visible>
         <animation type="WindowOpen" reversible="false">
             <effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in"/>
         </animation>

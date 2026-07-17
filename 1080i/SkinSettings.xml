@@ -2039,7 +2039,7 @@
                             <disabledcolor>PanelWhite70</disabledcolor>
                             <animation effect="slide" start="0" end="0,-298" time="150" condition="true">Conditional</animation>
                             <align>left</align>
-                            <label>v$INFO[System.AddonVersion(skin.arctic.zephyr.mod)]</label>
+                            <label>v$INFO[System.AddonVersion(skin.arctic.zephyr.mod.gettuh)]</label>
                         </control>
                         <control type="button" id="9911">
                             <width>1360</width>

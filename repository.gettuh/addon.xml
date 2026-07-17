@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.gettuh" name="GetTuh Kodi Repository" version="1.0.0" provider-name="GetTuh">
+    <extension point="xbmc.addon.repository" name="GetTuh Kodi Repository">
+        <dir>
+            <info compressed="false">https://gettuh.github.io/skin.arctic.zephyr.mod.getTuh/addons.xml</info>
+            <checksum>https://gettuh.github.io/skin.arctic.zephyr.mod.getTuh/addons.xml.md5</checksum>
+            <datadir zip="true">https://gettuh.github.io/skin.arctic.zephyr.mod.getTuh/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">GetTuh's personal Kodi addon repository</summary>
+        <description lang="en_GB">Repository for GetTuh's Kodi addons, including the Arctic: Zephyr - Reloaded (GetTuh) skin fork. Install this addon in Kodi to receive automatic updates.</description>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>https://github.com/GetTuh/skin.arctic.zephyr.mod.getTuh</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
