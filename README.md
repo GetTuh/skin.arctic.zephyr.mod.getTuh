@@ -14,7 +14,7 @@ This repo publishes a self-updating Kodi repository via GitHub Pages, so once it
 Kodi will handle future updates the same way it does for any other repository.
 
 1. In Kodi, go to **Settings > File manager > Add source**, and add this URL as a source:
-   `https://gettuh.github.io/skin.arctic.zephyr.mod.getTuh/`
+   `https://gettuh.github.io/skin.arctic.zephyr.mod.getTuh/repository.gettuh/`
 2. Go to **Settings > Add-ons > Install from zip file**, pick the source you just added, and
    install `repository.gettuh-1.0.0.zip`.
 3. Go to **Add-ons > Install from repository > GetTuh Kodi Repository > Look and feel > Skins**,
