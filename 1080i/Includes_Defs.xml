@@ -1315,7 +1315,7 @@
             <label2>$INFO[Skin.String(Widget.$PARAM[hubid].Label)]</label2>
             <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <visible>String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
-            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label&amp;skinType=Widget.$PARAM[hubid].Type)</onclick>
+            <onclick>RunScript(script.skinshortcuts,type=skinstring,skinPath=Widget.$PARAM[hubid],skinLabel=Widget.$PARAM[hubid].Label,skinType=Widget.$PARAM[hubid].Type)</onclick>
             <onunfocus condition="[String.Contains(Skin.String(Widget.$PARAM[hubid]),musicdb://) | String.Contains(Skin.String(Widget.$PARAM[hubid]),library://music) | String.Contains(Skin.String(Widget.$PARAM[hubid]),sources://music) | String.Contains(Skin.String(Widget.$PARAM[hubid]),plugin://plugin.audio)]">Skin.SetString(Widget.$PARAM[hubid].Content,music)</onunfocus>
             <onunfocus condition="String.Contains(Skin.String(Widget.$PARAM[hubid]),Pictures)">Skin.SetString(Widget.$PARAM[hubid].Content,pictures)</onunfocus>
             <onunfocus condition="!String.IsEmpty(Skin.String(Widget.$PARAM[hubid])) + ![String.Contains(Skin.String(Widget.$PARAM[hubid]),Pictures) | String.Contains(Skin.String(Widget.$PARAM[hubid]),musicdb://) | String.Contains(Skin.String(Widget.$PARAM[hubid]),library://music) | String.Contains(Skin.String(Widget.$PARAM[hubid]),sources://music) | String.Contains(Skin.String(Widget.$PARAM[hubid]),plugin://plugin.audio)]">Skin.SetString(Widget.$PARAM[hubid].Content,videos)</onunfocus>
@@ -1350,7 +1350,7 @@
             <include>DefDialogButtons</include>
             <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <visible>String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
-            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
+            <onclick>RunScript(script.skinshortcuts,type=manage,menu=x$PARAM[hubid])</onclick>
         </control>
     </include>
 

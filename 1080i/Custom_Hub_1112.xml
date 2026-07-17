@@ -7,7 +7,7 @@
     <onunload>ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
     <controls>
         <include content="DefHubWindow">
-            <param name="list" value="skinshortcuts-group-x1112"/>
+            <param name="list" value="skinshortcuts-x1112"/>
         </include>
     </controls>
 </window>

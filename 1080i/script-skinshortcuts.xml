@@ -3,7 +3,7 @@
     <defaultcontrol always="true">401</defaultcontrol>
     <onunload>ClearProperty(Backg,Home)</onunload>
     <onunload condition="Control.IsVisible(9900)">ClearProperty(custommenu,Home)</onunload>
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|x1111|x1112|x1113|x1114|x1115|x1116|x1117|x1118|x1119|powermenu&amp;levels=6)</onunload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml)</onunload>
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
@@ -272,6 +272,16 @@
                     <include>DefDialogButtonsGradient</include>
                     <visible>String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
                 </control>
+                <control type="button" id="306" description="Set Icon">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>Icon</label>
+                    <label2>$INFO[Container(211).ListItem.Icon]</label2>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>DefDialogButtonsGradient</include>
+                    <visible>String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
+                </control>
                 <include>WidgetSelector</include>
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
@@ -342,10 +352,12 @@
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>
+                    <label>184</label>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
                     <visible>String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
+                    <onclick>SendClick(312)</onclick>
                 </control>
             </control>
 
@@ -434,7 +446,6 @@
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
                     <visible allowhiddenfocus="true">String.IsEqual(Window(Home).Property(skinshortcuts-Widget),1)</visible>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="406" description="Set Custom">
                     <width>100%</width>
@@ -618,12 +629,10 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 2</label>
                     <label2>$VAR[LabelWidgetShortcutsName2]</label2>
-                    <onclick>SetProperty(widgetID,2)</onclick>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="407" description="Set Custom">
                     <width>100%</width>
@@ -790,12 +799,10 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 3</label>
                     <label2>$VAR[LabelWidgetShortcutsName3]</label2>
-                    <onclick>SetProperty(widgetID,3)</onclick>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="408" description="Set Custom">
                     <width>100%</width>
@@ -963,12 +970,10 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 4</label>
                     <label2>$VAR[LabelWidgetShortcutsName4]</label2>
-                    <onclick>SetProperty(widgetID,4)</onclick>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="409" description="Set Custom">
                     <width>100%</width>
@@ -1137,12 +1142,10 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 5</label>
                     <label2>$VAR[LabelWidgetShortcutsName5]</label2>
-                    <onclick>SetProperty(widgetID,5)</onclick>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="410" description="Set Custom">
                     <width>100%</width>
@@ -1311,12 +1314,10 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 6</label>
                     <label2>$VAR[LabelWidgetShortcutsName6]</label2>
-                    <onclick>SetProperty(widgetID,6)</onclick>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <onclick>SendClick(312)</onclick>
                 </control>
                 <control type="button" id="411" description="Set Custom">
                     <width>100%</width>

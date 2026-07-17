@@ -1672,7 +1672,7 @@
                     <include condition="$EXP[HasHomemenuAutoSlideOutAnimation]">SlideOutItemsButton</include>
                 </focusedlayout>
                 <content>
-                    <include>skinshortcuts-submenu</include>
+                    <include>skinshortcuts-mainmenu-submenu</include>
                 </content>
             </control>
         </control>
@@ -1785,7 +1785,7 @@
                     <include condition="$EXP[HasHomemenuAutoSlideOutAnimation]">SlideOutItemsButton</include>
                 </focusedlayout>
                 <content>
-                    <include>skinshortcuts-submenu</include>
+                    <include>skinshortcuts-mainmenu-submenu</include>
                 </content>
             </control>
         </control>
@@ -2716,7 +2716,7 @@
                         </control>
                     </focusedlayout>
                     <content>
-                        <include>skinshortcuts-submenu</include>
+                        <include>skinshortcuts-mainmenu-submenu</include>
                     </content>
                 </control>
             </control>
@@ -3665,7 +3665,7 @@
                         <include condition="$EXP[HasHomemenuAutoSlideOutAnimation]">SlideOutItemsButton</include>
                     </focusedlayout>
                     <content>
-                        <include>skinshortcuts-submenu</include>
+                        <include>skinshortcuts-mainmenu-submenu</include>
                     </content>
                 </control>
             </control>

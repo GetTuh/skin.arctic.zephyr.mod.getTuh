@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+
+    <!-- ============ Widget picker + background picker buttons ============ -->
+    <buttons>
+        <button id="9451" property="widget" type="widget" title="$LOCALIZE[31266] 1" />
+        <button id="9345" property="widget.2" type="widget" title="$LOCALIZE[31266] 2" />
+        <button id="9346" property="widget.3" type="widget" title="$LOCALIZE[31266] 3" />
+        <button id="9358" property="widget.4" type="widget" title="$LOCALIZE[31266] 4" />
+        <button id="4591" property="widget.5" type="widget" title="$LOCALIZE[31266] 5" />
+        <button id="11002" property="widget.6" type="widget" title="$LOCALIZE[31266] 6" />
+        <button id="310" property="background" type="background" title="$LOCALIZE[31110]" />
+    </buttons>
+
+    <!-- ============ Widget Sort By (per slot) ============ -->
+    <property name="widgetSortby" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <property name="widgetSortby.2" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType.2=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType.2=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType.2=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <property name="widgetSortby.3" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType.3=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType.3=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType.3=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <property name="widgetSortby.4" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType.4=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType.4=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType.4=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <property name="widgetSortby.5" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType.5=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType.5=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType.5=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <property name="widgetSortby.6" type="options" templateonly="true">
+        <options>
+            <option value="title" label="$LOCALIZE[369]" />
+            <option value="year" label="$LOCALIZE[345]" />
+            <option value="album" label="$LOCALIZE[558]" />
+            <option value="tracknumber" label="$LOCALIZE[554]" condition="widgetType.6=songs" />
+            <option value="channelnumber" label="$LOCALIZE[19029]" />
+            <option value="dateadded" label="$LOCALIZE[570]" condition="!widgetType.6=pvr" />
+            <option value="random" label="$LOCALIZE[590]" />
+            <option value="tvshowtitle" label="$LOCALIZE[36902]" />
+            <option value="date" label="$LOCALIZE[552]" condition="widgetType.6=episodes" />
+            <option value="artist" label="$LOCALIZE[557]" />
+            <option value="rating" label="$LOCALIZE[563]" />
+            <option value="userrating" label="$LOCALIZE[38018]" />
+            <option value="lastplayed" label="$LOCALIZE[568]" />
+            <option value="lastused" label="$LOCALIZE[12012]" />
+            <option value="file" label="$LOCALIZE[561]" />
+            <option value="genre" label="$LOCALIZE[515]" />
+        </options>
+    </property>
+    <buttons>
+        <button id="9402" property="widgetSortby" title="$LOCALIZE[581]" />
+        <button id="9792" property="widgetSortby.2" title="$LOCALIZE[581]" />
+        <button id="9602" property="widgetSortby.3" title="$LOCALIZE[581]" />
+        <button id="9702" property="widgetSortby.4" title="$LOCALIZE[581]" />
+        <button id="9802" property="widgetSortby.5" title="$LOCALIZE[581]" />
+        <button id="11009" property="widgetSortby.6" title="$LOCALIZE[581]" />
+    </buttons>
+
+    <!-- ============ Widget Aspect (per slot) ============ -->
+    <property name="widgetaspect" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget=mysubmenu + !widget~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget=mysubmenu + !widget~weather + !widget=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget=mysubmenu + !widget~weather + !widget=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget=mysubmenu + !widget~weather + !widget=custom + !widgetPath~studios + !widgetPath~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget=mysubmenu + !widget~weather + !widgetPath~studios + !widgetPath~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget=mysubmenu + !widget~weather + !widget=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget=mysubmenu + !widget~weather + !widget=custom" />
+        </options>
+    </property>
+    <property name="widgetaspect.2" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget.2=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget.2=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget.2=mysubmenu + !widget.2~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget.2=mysubmenu + !widget.2~weather + !widget.2=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget.2=mysubmenu + !widget.2~weather + !widget.2=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget.2=mysubmenu + !widget.2~weather + !widget.2=custom + !widgetPath.2~studios + !widgetPath.2~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget.2=mysubmenu + !widget.2~weather + !widgetPath.2~studios + !widgetPath.2~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget.2=mysubmenu + !widget.2~weather + !widget.2=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget.2=mysubmenu + !widget.2~weather + !widget.2=custom" />
+        </options>
+    </property>
+    <property name="widgetaspect.3" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget.3=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget.3=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget.3=mysubmenu + !widget.3~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget.3=mysubmenu + !widget.3~weather + !widget.3=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget.3=mysubmenu + !widget.3~weather + !widget.3=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget.3=mysubmenu + !widget.3~weather + !widget.3=custom + !widgetPath.3~studios + !widgetPath.3~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget.3=mysubmenu + !widget.3~weather + !widgetPath.3~studios + !widgetPath.3~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget.3=mysubmenu + !widget.3~weather + !widget.3=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget.3=mysubmenu + !widget.3~weather + !widget.3=custom" />
+        </options>
+    </property>
+    <property name="widgetaspect.4" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget.4=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget.4=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget.4=mysubmenu + !widget.4~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget.4=mysubmenu + !widget.4~weather + !widget.4=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget.4=mysubmenu + !widget.4~weather + !widget.4=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget.4=mysubmenu + !widget.4~weather + !widget.4=custom + !widgetPath.4~studios + !widgetPath.4~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget.4=mysubmenu + !widget.4~weather + !widgetPath.4~studios + !widgetPath.4~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget.4=mysubmenu + !widget.4~weather + !widget.4=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget.4=mysubmenu + !widget.4~weather + !widget.4=custom" />
+        </options>
+    </property>
+    <property name="widgetaspect.5" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget.5=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget.5=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget.5=mysubmenu + !widget.5~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget.5=mysubmenu + !widget.5~weather + !widget.5=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget.5=mysubmenu + !widget.5~weather + !widget.5=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget.5=mysubmenu + !widget.5~weather + !widget.5=custom + !widgetPath.5~studios + !widgetPath.5~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget.5=mysubmenu + !widget.5~weather + !widgetPath.5~studios + !widgetPath.5~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget.5=mysubmenu + !widget.5~weather + !widget.5=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget.5=mysubmenu + !widget.5~weather + !widget.5=custom" />
+        </options>
+    </property>
+    <property name="widgetaspect.6" type="options">
+        <options>
+            <option value="Poster" label="$LOCALIZE[31262]" condition="!widget.6=mysubmenu" />
+            <option value="Square" label="$LOCALIZE[31263]" />
+            <option value="Fanart" label="$LOCALIZE[31462]" condition="!widget.6=mysubmenu" />
+            <option value="Thumbnail" label="$LOCALIZE[31265]" condition="!widget.6=mysubmenu + !widget.6~weather" />
+            <option value="FanartSmall" label="$LOCALIZE[31703]" condition="!widget.6=mysubmenu + !widget.6~weather + !widget.6=custom" />
+            <option value="ThumbnailSmall" label="$LOCALIZE[31704]" condition="!widget.6=mysubmenu + !widget.6~weather + !widget.6=custom" />
+            <option value="ThumbnailPosterSmall" label="$LOCALIZE[31705]" condition="!widget.6=mysubmenu + !widget.6~weather + !widget.6=custom + !widgetPath.6~studios + !widgetPath.6~genres" />
+            <option value="Banner" label="$LOCALIZE[20020]" condition="!widget.6=mysubmenu + !widget.6~weather + !widgetPath.6~studios + !widgetPath.6~genres" />
+            <option value="SquareSmall" label="$LOCALIZE[31406]" condition="widget.6=mysubmenu + !widget.6~weather + !widget.6=custom" />
+            <option value="SquareMedium" label="$LOCALIZE[31407]" condition="widget.6=mysubmenu + !widget.6~weather + !widget.6=custom" />
+        </options>
+    </property>
+    <buttons>
+        <button id="9401" property="widgetaspect" title="$LOCALIZE[31261]" />
+        <button id="9521" property="widgetaspect.2" title="$LOCALIZE[31261]" />
+        <button id="9621" property="widgetaspect.3" title="$LOCALIZE[31261]" />
+        <button id="9721" property="widgetaspect.4" title="$LOCALIZE[31261]" />
+        <button id="9821" property="widgetaspect.5" title="$LOCALIZE[31261]" />
+        <button id="11005" property="widgetaspect.6" title="$LOCALIZE[31261]" />
+    </buttons>
+
+    <!-- ============ Widget Sort Direction (per slot) ============ -->
+    <property name="widgetSort" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <property name="widgetSort.2" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <property name="widgetSort.3" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <property name="widgetSort.4" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <property name="widgetSort.5" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <property name="widgetSort.6" type="options" templateonly="true">
+        <options>
+            <option value="descending" label="$LOCALIZE[585]" />
+            <option value="ascending" label="$LOCALIZE[584]" />
+        </options>
+    </property>
+    <buttons>
+        <button id="9403" property="widgetSort" title="$LOCALIZE[580]" />
+        <button id="9793" property="widgetSort.2" title="$LOCALIZE[580]" />
+        <button id="9603" property="widgetSort.3" title="$LOCALIZE[580]" />
+        <button id="9703" property="widgetSort.4" title="$LOCALIZE[580]" />
+        <button id="9803" property="widgetSort.5" title="$LOCALIZE[580]" />
+        <button id="11010" property="widgetSort.6" title="$LOCALIZE[580]" />
+    </buttons>
+
+    <!-- ============ Widget Banner (slot 1 only, matches v2) ============ -->
+    <property name="widgetBanner" type="options">
+        <options>
+            <option value="yes" label="$LOCALIZE[107]" />
+            <option value="no" label="$LOCALIZE[106]" />
+        </options>
+    </property>
+    <buttons>
+        <button id="9404" property="widgetBanner" type="toggle" title="$LOCALIZE[31235]" />
+    </buttons>
+
+    <!-- ============ Widget Edge Distance (per slot) ============ -->
+    <property name="widgetEdgeDistance" type="toggle" value="yes" />
+    <property name="widgetEdgeDistance.2" type="toggle" value="yes" />
+    <property name="widgetEdgeDistance.3" type="toggle" value="yes" />
+    <property name="widgetEdgeDistance.4" type="toggle" value="yes" />
+    <property name="widgetEdgeDistance.5" type="toggle" value="yes" />
+    <property name="widgetEdgeDistance.6" type="toggle" value="yes" />
+    <buttons>
+        <button id="10301" property="widgetEdgeDistance" title="$LOCALIZE[31453]" />
+        <button id="10302" property="widgetEdgeDistance.2" title="$LOCALIZE[31453]" />
+        <button id="10303" property="widgetEdgeDistance.3" title="$LOCALIZE[31453]" />
+        <button id="10304" property="widgetEdgeDistance.4" title="$LOCALIZE[31453]" />
+        <button id="10305" property="widgetEdgeDistance.5" title="$LOCALIZE[31453]" />
+        <button id="11008" property="widgetEdgeDistance.6" title="$LOCALIZE[31453]" />
+    </buttons>
+
+    <!-- ============ Widget Square Aspect Ratio (per slot) ============ -->
+    <property name="widgetAspectRatio" type="toggle" value="scale" />
+    <property name="widgetAspectRatio.2" type="toggle" value="scale" />
+    <property name="widgetAspectRatio.3" type="toggle" value="scale" />
+    <property name="widgetAspectRatio.4" type="toggle" value="scale" />
+    <property name="widgetAspectRatio.5" type="toggle" value="scale" />
+    <property name="widgetAspectRatio.6" type="toggle" value="scale" />
+    <buttons>
+        <button id="10001" property="widgetAspectRatio" title="$LOCALIZE[31402]" />
+        <button id="10002" property="widgetAspectRatio.2" title="$LOCALIZE[31402]" />
+        <button id="10003" property="widgetAspectRatio.3" title="$LOCALIZE[31402]" />
+        <button id="10004" property="widgetAspectRatio.4" title="$LOCALIZE[31402]" />
+        <button id="10005" property="widgetAspectRatio.5" title="$LOCALIZE[31402]" />
+        <button id="11007" property="widgetAspectRatio.6" title="$LOCALIZE[31402]" />
+    </buttons>
+
+    <!-- ============ Widget AutoScroll (per slot; slot 1 has no .1 suffix in v2, others do) ============ -->
+    <property name="widgetAuto" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <property name="widgetAuto.2" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <property name="widgetAuto.3" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <property name="widgetAuto.4" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <property name="widgetAuto.5" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <property name="widgetAuto.6" type="options">
+        <options>
+            <option value="$NUMBER[5000]" label=" 5" />
+            <option value="$NUMBER[7000]" label=" 7" />
+            <option value="$NUMBER[10000]" label=" 10" />
+            <option value="$NUMBER[15000]" label=" 15" />
+            <option value="$NUMBER[20000]" label=" 20" />
+            <option value="$NUMBER[25000]" label=" 25" />
+        </options>
+    </property>
+    <buttons>
+        <button id="4196" property="widgetAuto" title="$LOCALIZE[31339]" />
+        <button id="4195" property="widgetAuto.2" title="$LOCALIZE[31339]" />
+        <button id="4194" property="widgetAuto.3" title="$LOCALIZE[31339]" />
+        <button id="4193" property="widgetAuto.4" title="$LOCALIZE[31339]" />
+        <button id="4593" property="widgetAuto.5" title="$LOCALIZE[31339]" />
+        <button id="11011" property="widgetAuto.6" title="$LOCALIZE[31339]" />
+    </buttons>
+
+    <!-- ============ Widget List Type (per slot) ============ -->
+    <property name="widgetListType" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <property name="widgetListType.2" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <property name="widgetListType.3" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <property name="widgetListType.4" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <property name="widgetListType.5" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <property name="widgetListType.6" type="options">
+        <options>
+            <option value="wraplist" label="$LOCALIZE[31148]" />
+            <option value="list" label="$LOCALIZE[31342]" />
+            <option value="fixedlist" label="$LOCALIZE[31343]" />
+        </options>
+    </property>
+    <buttons>
+        <button id="41911" property="widgetListType" title="$LOCALIZE[31341]" />
+        <button id="41912" property="widgetListType.2" title="$LOCALIZE[31341]" />
+        <button id="41913" property="widgetListType.3" title="$LOCALIZE[31341]" />
+        <button id="41914" property="widgetListType.4" title="$LOCALIZE[31341]" />
+        <button id="41915" property="widgetListType.5" title="$LOCALIZE[31341]" />
+        <button id="41916" property="widgetListType.6" title="$LOCALIZE[31341]" />
+    </buttons>
+
+</properties>

@@ -2,7 +2,7 @@
 <addon id="skin.arctic.zephyr.mod.gettuh" version="3.0.3" name="Arctic: Zephyr - Reloaded (GetTuh)" provider-name="jurialmunkey, beatmasterrs, GetTuh">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
-        <import addon="script.skinshortcuts" version="0.4.0"/>
+        <import addon="script.skinshortcuts" version="3.0.1"/>
         <import addon="script.globalsearch" version="5.0.0"/>
         <import addon="script.image.resource.select" version="0.0.5"/>
         <import addon="resource.images.weathericons.white" version="0.0.6"/>

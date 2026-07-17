@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backgrounds>
+
+    <!-- Browse for a custom background image/video, matches v2 <backgroundBrowse>True</backgroundBrowse> -->
+    <background name="browse" label="$LOCALIZE[1030]" type="browse" />
+
+    <!-- Cycle a playlist of backgrounds, matches v2 <background label="::PLAYLIST::">playlistBackground</background> -->
+    <background name="playlist" label="$LOCALIZE[136]" type="playlist">
+        <path>special://skin/extras/playlists/</path>
+    </background>
+
+</backgrounds>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+
+    <!-- ================= MENUS ================= -->
+
+    <menu name="mainmenu" container="300">
+        <item name="videos">
+            <label>3</label>
+            <icon>special://skin/extras/icons/video-addons.png</icon>
+            <action>ActivateWindow(Videos,VideoLibrary)</action>
+        </item>
+        <item name="movies">
+            <label>20342</label>
+            <icon>special://skin/extras/icons/film.png</icon>
+            <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        </item>
+        <item name="tvshows">
+            <label>20343</label>
+            <icon>special://skin/extras/icons/tv.png</icon>
+            <action>ActivateWindow(Videos,TVShowTitles,return)</action>
+        </item>
+        <item name="music">
+            <label>2</label>
+            <icon>special://skin/extras/icons/songs.png</icon>
+            <action>ActivateWindow(Music)</action>
+        </item>
+        <item name="livetv">
+            <label>31103</label>
+            <icon>special://skin/extras/icons/livetv.png</icon>
+            <action>ActivateWindow(Tvchannels)</action>
+        </item>
+        <item name="pictures">
+            <label>1</label>
+            <icon>special://skin/extras/icons/pictures.png</icon>
+            <action>ActivateWindow(Pictures)</action>
+        </item>
+        <item name="programs">
+            <label>0</label>
+            <icon>special://skin/extras/icons/addons.png</icon>
+            <action>ActivateWindow(Programs)</action>
+        </item>
+        <item name="settings">
+            <label>10004</label>
+            <icon>special://skin/extras/icons/settings.png</icon>
+            <protect type="action" heading="31176" message="31177">
+                <action>ActivateWindow(Settings)</action>
+            </protect>
+        </item>
+        <item name="power">
+            <label>33060</label>
+            <icon>special://skin/extras/icons/power.png</icon>
+            <action>ActivateWindow(shutdownmenu)</action>
+        </item>
+    </menu>
+
+    <menu name="x1111" container="9501">
+        <item name="movietitles">
+            <label>20342</label>
+            <icon>special://skin/extras/icons/film.png</icon>
+            <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        </item>
+        <item name="recentlyadded">
+            <label>31173</label>
+            <icon>special://skin/extras/icons/recentlyadded.png</icon>
+            <action>ActivateWindow(Videos,RecentlyAddedMovies,return)</action>
+        </item>
+        <item name="recentmovies">
+            <label>31174</label>
+            <icon>special://skin/extras/icons/recent.png</icon>
+            <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</action>
+        </item>
+        <item name="randommovies">
+            <label>31175</label>
+            <icon>special://skin/extras/icons/signpost.png</icon>
+            <action>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</action>
+        </item>
+        <item name="search">
+            <label>137</label>
+            <icon>special://skin/extras/icons/search.png</icon>
+            <action>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</action>
+        </item>
+        <item name="moviegenres">
+            <label>135</label>
+            <icon>special://skin/extras/icons/genre.png</icon>
+            <action>ActivateWindow(Videos,MovieGenres,return)</action>
+        </item>
+        <item name="moviedirectors">
+            <label>20348</label>
+            <icon>special://skin/extras/icons/director.png</icon>
+            <action>ActivateWindow(Videos,MovieDirectors,return)</action>
+        </item>
+        <item name="movieactors">
+            <label>344</label>
+            <icon>special://skin/extras/icons/actor.png</icon>
+            <action>ActivateWindow(Videos,MovieActors,return)</action>
+        </item>
+        <item name="moviesets">
+            <label>20434</label>
+            <icon>special://skin/extras/icons/year.png</icon>
+            <action>ActivateWindow(Videos,MovieSets,return)</action>
+        </item>
+        <item name="videoplaylists">
+            <label>136</label>
+            <icon>special://skin/extras/icons/playlist.png</icon>
+            <action>ActivateWindow(videos,special://videoplaylists/,return)</action>
+        </item>
+        <item name="videofiles">
+            <label>1214</label>
+            <icon>special://skin/extras/icons/files.png</icon>
+            <action>ActivateWindow(Videos,Files,return)</action>
+        </item>
+        <item name="videoaddons">
+            <label>24001</label>
+            <icon>special://skin/extras/icons/video-addons.png</icon>
+            <action>ActivateWindow(videos,addons://sources/video/,return)</action>
+        </item>
+        <item name="updatelibrary">
+            <label>653</label>
+            <icon>special://skin/extras/icons/update.png</icon>
+            <action>UpdateLibrary(video)</action>
+        </item>
+    </menu>
+
+    <menu name="x1112" container="9501">
+        <item name="tvshowtitles">
+            <label>20343</label>
+            <icon>special://skin/extras/icons/tv.png</icon>
+            <action>ActivateWindow(Videos,TvShowTitles,return)</action>
+        </item>
+        <item name="recentlyadded">
+            <label>31173</label>
+            <icon>special://skin/extras/icons/recentlyadded.png</icon>
+            <action>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</action>
+        </item>
+        <item name="recentepisodes">
+            <label>31174</label>
+            <icon>special://skin/extras/icons/recent.png</icon>
+            <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</action>
+        </item>
+        <item name="randomepisodes">
+            <label>31175</label>
+            <icon>special://skin/extras/icons/signpost.png</icon>
+            <action>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</action>
+        </item>
+        <item name="search">
+            <label>137</label>
+            <icon>special://skin/extras/icons/search.png</icon>
+            <action>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</action>
+        </item>
+        <item name="tvshowgenres">
+            <label>135</label>
+            <icon>special://skin/extras/icons/genre.png</icon>
+            <action>ActivateWindow(Videos,TvShowGenres,return)</action>
+        </item>
+        <item name="tvshowstudios">
+            <label>20388</label>
+            <icon>special://skin/extras/icons/director.png</icon>
+            <action>ActivateWindow(Videos,TvShowStudios,return)</action>
+        </item>
+        <item name="tvshowactors">
+            <label>344</label>
+            <icon>special://skin/extras/icons/actor.png</icon>
+            <action>ActivateWindow(Videos,TvShowActors,return)</action>
+        </item>
+        <item name="tvshowyears">
+            <label>652</label>
+            <icon>special://skin/extras/icons/year.png</icon>
+            <action>ActivateWindow(Videos,TvShowYears,return)</action>
+        </item>
+        <item name="videoplaylists">
+            <label>136</label>
+            <icon>special://skin/extras/icons/playlist.png</icon>
+            <action>ActivateWindow(videos,special://videoplaylists/,return)</action>
+        </item>
+        <item name="videofiles">
+            <label>1214</label>
+            <icon>special://skin/extras/icons/files.png</icon>
+            <action>ActivateWindow(Videos,Files,return)</action>
+        </item>
+        <item name="videoaddons">
+            <label>24001</label>
+            <icon>special://skin/extras/icons/video-addons.png</icon>
+            <action>ActivateWindow(videos,addons://sources/video/,return)</action>
+        </item>
+        <item name="updatelibrary">
+            <label>653</label>
+            <icon>special://skin/extras/icons/update.png</icon>
+            <action>UpdateLibrary(video)</action>
+        </item>
+    </menu>
+
+    <!-- Registers the "skinshortcuts-mainmenu-submenu" include (container 302) for
+         per-item submenus on mainmenu entries; empty by default, populated per-item
+         by the user through the management dialog. -->
+    <submenu name="mainmenu" container="302" />
+
+    <!-- Hubs x1113-x1119: no shipped default items, populated by the user from <groupings> -->
+    <menu name="x1113" container="9501" />
+    <menu name="x1114" container="9501" />
+    <menu name="x1115" container="9501" />
+    <menu name="x1116" container="9501" />
+    <menu name="x1117" container="9501" />
+    <menu name="x1118" container="9501" />
+    <menu name="x1119" container="9501" />
+
+    <menu name="powermenu" container="3110">
+        <item name="reloadskin">
+            <label>$LOCALIZE[31195]</label>
+            <action>ReloadSkin()</action>
+        </item>
+        <item name="quit">
+            <label>$LOCALIZE[13012]</label>
+            <action>Quit()</action>
+            <visible>System.ShowExitButton</visible>
+        </item>
+        <item name="mastermode">
+            <label>20046</label>
+            <label2>20045</label2>
+            <action>mastermode</action>
+            <visible>System.HasLocks</visible>
+        </item>
+        <item name="systemlogoff">
+            <label>$LOCALIZE[31360]</label>
+            <action>Dialog.Close(all,true)</action>
+            <action>System.LogOff</action>
+            <visible>[System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + System.Loggedon</visible>
+        </item>
+        <item name="powerdown">
+            <label>$LOCALIZE[13005]</label>
+            <action>Powerdown()</action>
+            <visible>System.CanPowerDown</visible>
+        </item>
+        <item name="cancelalarm">
+            <label>$LOCALIZE[20151]</label>
+            <action>CancelAlarm(shutdowntimer)</action>
+            <visible>System.HasAlarm(shutdowntimer)</visible>
+        </item>
+        <item name="setalarm">
+            <label>$LOCALIZE[20150]</label>
+            <action>AlarmClock(shutdowntimer,Shutdown())</action>
+            <visible>!System.HasAlarm(shutdowntimer)</visible>
+            <visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+        </item>
+        <item name="alarmset">
+            <label>$LOCALIZE[31364]</label>
+            <action>noop</action>
+            <visible>System.HasAlarm(shutdowntimer)</visible>
+        </item>
+        <item name="suspend">
+            <label>$LOCALIZE[13011]</label>
+            <action>Suspend()</action>
+            <visible>System.CanSuspend</visible>
+        </item>
+        <item name="reboot">
+            <label>$LOCALIZE[13013]</label>
+            <action>Reset()</action>
+            <visible>System.CanReboot</visible>
+        </item>
+        <item name="reboottoandroid">
+            <label>$LOCALIZE[31232]</label>
+            <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
+            <action>Reset()</action>
+            <visible>System.PathExist("/dev/env")</visible>
+        </item>
+        <item name="skinsettings">
+            <label>$LOCALIZE[31156]</label>
+            <action>ActivateWindowAndFocus(skinsettings,9108,2)</action>
+            <visible>System.Loggedon</visible>
+        </item>
+        <item name="systeminfo">
+            <label>$LOCALIZE[130]</label>
+            <action>ActivateWindow(systeminfo)</action>
+            <visible>System.Loggedon</visible>
+        </item>
+        <item name="filemanager">
+            <label>$LOCALIZE[10003]</label>
+            <action>ActivateWindow(filemanager)</action>
+            <visible>System.Loggedon</visible>
+        </item>
+        <item name="settings">
+            <label>$LOCALIZE[5]</label>
+            <action>ActivateWindow(settings)</action>
+            <visible>System.Loggedon</visible>
+        </item>
+    </menu>
+
+    <!-- ================= GROUPINGS (shortcut picker catalog) ================= -->
+
+    <groupings>
+        <group name="common" label="32029">
+            <shortcut name="videolibrary" label="3" type="3" icon="DefaultVideo.png"><action>ActivateWindow(Videos,VideoLibrary)</action></shortcut>
+            <shortcut name="movietitles" label="342" type="20342" icon="DefaultMovies.png"><action>ActivateWindow(Videos,videodb://movies/titles/,return)</action></shortcut>
+            <shortcut name="tvshowtitles" label="20343" type="20343" icon="DefaultTVShows.png"><action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action></shortcut>
+            <shortcut name="musiclibrary" label="2" type="2" icon="DefaultAddonMusic.png"><action>ActivateWindow(Music,musicdb://,return)</action></shortcut>
+            <shortcut name="artists" label="133" type="2" icon="DefaultMusicArtists.png"><action>ActivateWindow(Music,musicdb://artists/,return)</action></shortcut>
+            <shortcut name="albums" label="132" type="2" icon="DefaultMusicAlbums.png"><action>ActivateWindow(Music,musicdb://albums/,return)</action></shortcut>
+            <shortcut name="musicvideos" label="20389" type="20389" icon="DefaultMusicVideos.png"><action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action></shortcut>
+            <shortcut name="androidapps" label="20244" type="10001" icon="DefaultAddonProgram.png" condition="System.Platform.Android"><action>ActivateWindow(Programs,androidapp://sources/apps,return)</action></shortcut>
+            <shortcut name="libreelec" label="LibreELEC" type="10001" icon="DefaultLibreELEC.png" condition="System.AddonIsEnabled(service.libreelec.settings)"><action>RunAddon(service.libreelec.settings)</action></shortcut>
+            <shortcut name="coreelec" label="CoreELEC" type="10001" icon="DefaultCoreELEC.png" condition="System.AddonIsEnabled(service.coreelec.settings)"><action>RunAddon(service.coreelec.settings)</action></shortcut>
+            <shortcut name="programaddons" label="10001" type="10001" icon="DefaultAddonProgram.png"><action>ActivateWindow(Programs,Addons,return)</action></shortcut>
+            <shortcut name="videoaddons" label="1037" type="1037" icon="DefaultAddonVideo.png"><action>ActivateWindow(Videos,Addons,return)</action></shortcut>
+            <shortcut name="musicaddons" label="1038" type="1038" icon="DefaultAddonMusic.png"><action>ActivateWindow(MusicLibrary,Addons,return)</action></shortcut>
+            <shortcut name="pictureaddons" label="1039" type="1039" icon="DefaultAddonPicture.png"><action>ActivateWindow(Pictures,Addons,return)</action></shortcut>
+            <shortcut name="games" label="10821" type="10821" icon="DefaultAddonGame.png"><action>ActivateWindow(Games)</action></shortcut>
+            <shortcut name="tvguide" label="4" type="4" icon="DefaultAddonTvInfo.png"><action>ActivateWindow(TVGuide)</action></shortcut>
+            <shortcut name="tvchannels" label="19023" type="19023" icon="DefaultAddonTvInfo.png"><action>ActivateWindow(TVChannels)</action></shortcut>
+            <shortcut name="pictures" label="1" type="1" icon="DefaultPicture.png"><action>ActivateWindow(Pictures)</action></shortcut>
+            <shortcut name="weather" label="12600" type="12600" icon="DefaultAddonWeather.png"><action>ActivateWindow(Weather)</action></shortcut>
+            <shortcut name="shutdownmenu" label="33060" type="33060" icon="DefaultAddonNone.png"><action>ActivateWindow(shutdownmenu)</action></shortcut>
+            <shortcut name="playdisc" label="341" type="341" icon="DefaultVCD.png"><action>PlayDisc</action></shortcut>
+            <shortcut name="tvhub" label="31193" type="TVHub" icon="special://skin/extras/icons/tv.png"><action>ActivateWindow(1112)</action></shortcut>
+            <shortcut name="moviehub" label="31192" type="MovieHub" icon="special://skin/extras/icons/film.png"><action>ActivateWindow(1111)</action></shortcut>
+            <shortcut name="hub1119" label="Hub 1119" type="Hub 1119" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1119)</action></shortcut>
+            <shortcut name="hub1118" label="Hub 1118" type="Hub 1118" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1118)</action></shortcut>
+            <shortcut name="hub1117" label="Hub 1117" type="Hub 1117" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1117)</action></shortcut>
+            <shortcut name="hub1116" label="Hub 1116" type="Hub 1116" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1116)</action></shortcut>
+            <shortcut name="hub1115" label="Hub 1115" type="Hub 1115" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1115)</action></shortcut>
+            <shortcut name="hub1114" label="Hub 1114" type="Hub 1114" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1114)</action></shortcut>
+            <shortcut name="hub1113" label="Hub 1113" type="Hub 1113" icon="special://skin/extras/icons/addons.png"><action>ActivateWindow(1113)</action></shortcut>
+            <shortcut name="tmdbepisodes" label="31212" type="themoviedb.org episodes" icon="special://skin/extras/icons/director.png"><action>ActivateWindow(1105)</action></shortcut>
+            <shortcut name="tmdbmovies" label="31208" type="themoviedb.org movies" icon="special://skin/extras/icons/director.png"><action>ActivateWindow(1104)</action></shortcut>
+            <shortcut name="smartshortcuts" label="$LOCALIZE[31433]" type="32010" icon="special://skin/extras/icons/shipping.png" browse="programs"><action>||BROWSE||script.skin.helper.service/?action=smartshortcuts</action></shortcut>
+        </group>
+
+        <group name="videosgroup" label="32030">
+            <content source="library" target="video" />
+            <group name="videoplaylists" label="32040" flat="true">
+                <content source="playlists" target="videos" />
+            </group>
+            <group name="videoaddonsgroup" label="32010">
+                <shortcut name="videoaddonssub" label="1037" type="32014" icon="DefaultAddonVideo.png"><action>ActivateWindow(Videos,Addons,return)</action></shortcut>
+                <content source="addons" target="videos" />
+            </group>
+            <group name="videosourcesgroup" label="32075" flat="true">
+                <content source="sources" target="videos" />
+            </group>
+            <group name="commonplaylists" label="$LOCALIZE[31434]">
+                <group name="movieplaylists" label="$LOCALIZE[342]">
+                    <shortcut name="inprogressmovies" widget="InProgressMovies" label="31048" icon="special://skin/extras/icons/timer.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/InProgressMovies.xsp,return)</action></shortcut>
+                    <shortcut name="topratedmovies" widget="TopRatedMovies" label="31049" icon="special://skin/extras/icons/favourites.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/TopRatedMovies.xsp,return)</action></shortcut>
+                    <shortcut name="top20userratedmovies" widget="Top20UserRatedMovies" label="31317" icon="special://skin/extras/icons/favourites.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/Top20UserRatedMovies.xsp,return)</action></shortcut>
+                    <shortcut name="top250movies" widget="Top250Movies" label="31050" icon="special://skin/extras/icons/favourites.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/Top250Movies.xsp,return)</action></shortcut>
+                    <shortcut name="unwatchedmovies" widget="UnwatchedMovies" label="31051" icon="DefaultMovies.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/UnwatchedMovies.xsp,return)</action></shortcut>
+                </group>
+                <group name="tvshowplaylists" label="$LOCALIZE[20343]">
+                    <shortcut name="newtvshows" widget="NewTvShows" label="31053" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/NewShows.xsp,return)</action></shortcut>
+                    <shortcut name="newunwatchedtvshows" widget="NewUnwatchedTvShows" label="31323" icon="DefaultRecentlyAddedMovies.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/NewUnwatchedShows.xsp,return)</action></shortcut>
+                    <shortcut name="recenttvshows" widget="RecentTvShows" label="31054" icon="DefaultMusicRecentlyPlayed.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/RecentTvShows.xsp,return)</action></shortcut>
+                    <shortcut name="inprogresstv" widget="InProgress" label="626" icon="special://skin/extras/icons/timer.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/InProgressTvShows.xsp,return)</action></shortcut>
+                    <shortcut name="randomtvshows" widget="RandomTvShows" label="31056" icon="DefaultTVShows.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/RandomTvShows.xsp,return)</action></shortcut>
+                    <shortcut name="topratedtvshows" widget="TopRatedTvShows" label="31057" icon="DefaultTVShows.png" widgetTarget="video"><action>ActivateWindow(Videos,special://skin/extras/playlists/TopRatedTvShows.xsp,return)</action></shortcut>
+                </group>
+            </group>
+        </group>
+
+        <group name="musicgroup" label="32031">
+            <content source="library" target="music" />
+            <group name="musicplaylists" label="32040" flat="true">
+                <content source="playlists" target="music" />
+            </group>
+            <group name="musicaddonsgroup" label="32011">
+                <shortcut name="musicaddonssub" label="1038" type="32019" icon="DefaultAddonMusic.png"><action>ActivateWindow(MusicLibrary,Addons,return)</action></shortcut>
+                <content source="addons" target="audio" />
+            </group>
+            <group name="musicsourcesgroup" label="32075" flat="true">
+                <content source="sources" target="music" />
+            </group>
+        </group>
+
+        <group name="pvrgroup" label="32017" condition="PVR.HasTVChannels">
+            <content source="pvr" target="tv" />
+            <group name="pvrtv" label="19023" flat="true">
+                <content source="pvr" target="tv" />
+            </group>
+        </group>
+
+        <group name="radiogroup" label="32087" condition="PVR.HasRadioChannels">
+            <content source="pvr" target="radio" />
+            <group name="pvrradio" label="19024" flat="true">
+                <content source="pvr" target="radio" />
+            </group>
+        </group>
+
+        <group name="gtogroup" label="31447" condition="System.AddonIsEnabled(script.service.gto)">
+            <shortcut name="gtoscrape" label="$ADDON[script.service.gto 30116]" type="31103" icon="DefaultTVShows.png"><action>RunPlugin(plugin://script.service.gto?action=scrape)</action></shortcut>
+            <shortcut name="gtochangescraper" label="$ADDON[script.service.gto 30115]" type="31103" icon="DefaultTVShows.png"><action>RunPlugin(plugin://plugin.service.gto?action=change_scraper)</action></shortcut>
+        </group>
+
+        <group name="picturesgroup" label="32020" flat="true">
+            <content source="sources" target="pictures" />
+        </group>
+
+        <group name="addonsgroup" label="32007">
+            <group name="programaddonsgroup" label="32009">
+                <shortcut name="programaddonssub" label="10001" type="32021" icon="DefaultAddonProgram.png"><action>ActivateWindow(Programs,Addons,return)</action></shortcut>
+                <content source="addons" target="executable" />
+            </group>
+            <group name="videoaddonsgroup2" label="32010">
+                <shortcut name="videoaddonssub2" label="1037" type="32014" icon="DefaultAddonVideo.png"><action>ActivateWindow(Videos,Addons,return)</action></shortcut>
+                <content source="addons" target="videos" />
+            </group>
+            <group name="musicaddonsgroup2" label="32011">
+                <shortcut name="musicaddonssub2" label="1038" type="32019" icon="DefaultAddonMusic.png"><action>ActivateWindow(MusicLibrary,Addons,return)</action></shortcut>
+                <content source="addons" target="audio" />
+            </group>
+            <group name="pictureaddonsgroup" label="32012">
+                <shortcut name="pictureaddonssub" label="1039" type="32020" icon="DefaultAddonPicture.png"><action>ActivateWindow(Pictures,Addons,return)</action></shortcut>
+                <content source="addons" target="image" />
+            </group>
+        </group>
+
+        <group name="favouritesgroup" label="1036" flat="true">
+            <shortcut name="favourites" label="1036" type="1036" icon="special://skin/extras/icons/favourites.png"><action>ActivateWindow(favouritesbrowser)</action></shortcut>
+            <content source="favourites" />
+        </group>
+
+        <group name="gamesgroup" label="10821" flat="true">
+            <shortcut name="gamessub" label="10821" type="32021" icon="DefaultAddonGame.png"><action>ActivateWindow(Games)</action></shortcut>
+        </group>
+
+        <group name="weathergroup" label="400" flat="true">
+            <shortcut name="weathersub" label="400" type="400" icon="DefaultAddonWeather.png"><action>ActivateWindow(Weather)</action></shortcut>
+        </group>
+
+        <group name="settingsgroup" label="10004">
+            <content source="settings" />
+            <shortcut name="libreelec2" label="LibreELEC" type="10001" icon="DefaultLibreELEC.png" condition="System.AddonIsEnabled(service.libreelec.settings)"><action>RunAddon(service.libreelec.settings)</action></shortcut>
+            <shortcut name="coreelec2" label="CoreELEC" type="10001" icon="DefaultCoreELEC.png" condition="System.AddonIsEnabled(service.coreelec.settings)"><action>RunAddon(service.coreelec.settings)</action></shortcut>
+        </group>
+
+        <group name="commandsgroup" label="32054">
+            <content source="commands" />
+            <shortcut name="reboottoandroidsub" label="31232" type="10001" icon="special://skin/extras/icons/sysinfo.png">
+                <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
+                <action>Reset()</action>
+            </shortcut>
+            <shortcut name="playdiscsub" label="341" type="427" icon="special://skin/extras/icons/vcd.png"><action>PlayDisc</action></shortcut>
+            <shortcut name="ejecttray" label="13391" type="427" icon="special://skin/extras/icons/vcd_eject.png"><action>EjectTray()</action></shortcut>
+        </group>
+    </groupings>
+
+    <!-- ================= ICONS ================= -->
+
+    <icons>special://skin/extras/icons/</icons>
+
+    <overrides>
+        <icons>
+            <icon replace="DefaultShortcut.png">special://skin/extras/icons/addtile.png</icon>
+            <icon replace="DefaultVideo.png">special://skin/extras/icons/video.png</icon>
+            <icon replace="DefaultMovies.png">special://skin/extras/icons/film.png</icon>
+            <icon replace="DefaultTVShows.png">special://skin/extras/icons/tv.png</icon>
+            <icon replace="DefaultAudio.png">special://skin/extras/icons/songs.png</icon>
+            <icon replace="DefaultMusicAlbums.png">special://skin/extras/icons/songs.png</icon>
+            <icon replace="DefaultMusicVideos.png">special://skin/extras/icons/musicvideo.png</icon>
+            <icon replace="DefaultPicture.png">special://skin/extras/icons/pictures.png</icon>
+            <icon replace="DefaultProgram.png">special://skin/extras/icons/addons.png</icon>
+            <icon replace="DefaultDVDFull.png">special://skin/extras/icons/cd.png</icon>
+            <icon replace="DefaultFolder.png">special://skin/extras/icons/files.png</icon>
+            <icon replace="UnknownUser.png">special://skin/extras/icons/actor.png</icon>
+            <icon replace="DefaultVideoPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+            <icon replace="DefaultMusicPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+            <icon replace="DefaultRecentlyAddedMovies.png">special://skin/extras/icons/recentlyadded.png</icon>
+            <icon replace="DefaultActor.png">special://skin/extras/icons/artist.png</icon>
+            <icon replace="DefaultCountry.png">special://skin/extras/icons/world.png</icon>
+            <icon replace="DefaultDirector.png">special://skin/extras/icons/director.png</icon>
+            <icon replace="DefaultGenre.png">special://skin/extras/icons/genre.png</icon>
+            <icon replace="DefaultMusicGenre.png">special://skin/extras/icons/audiogenre.png</icon>
+            <icon replace="DefaultSets.png">special://skin/extras/icons/sets.png</icon>
+            <icon replace="DefaultStudios.png">special://skin/extras/icons/director.png</icon>
+            <icon replace="DefaultTags.png">special://skin/extras/icons/tags.png</icon>
+            <icon replace="DefaultMovieTitle.png">special://skin/extras/icons/film.png</icon>
+            <icon replace="DefaultTVShowTitle.png">special://skin/extras/icons/tv.png</icon>
+            <icon replace="DefaultMusicVideoTitle.png">special://skin/extras/icons/musicvideo.png</icon>
+            <icon replace="DefaultYear.png">special://skin/extras/icons/year.png</icon>
+            <icon replace="DefaultRecentlyAddedEpisodes.png">special://skin/extras/icons/recentlyadded.png</icon>
+            <icon replace="DefaultRecentlyAddedMusicVideos.png">special://skin/extras/icons/recentlyadded.png</icon>
+            <icon replace="DefaultInProgressShows.png">special://skin/extras/icons/recentlyadded.png</icon>
+            <icon replace="DefaultMusicArtists.png">special://skin/extras/icons/artist.png</icon>
+            <icon replace="DefaultMusicGenres.png">special://skin/extras/icons/audiogenre.png</icon>
+            <icon replace="DefaultMusicSongs.png">special://skin/extras/icons/song.png</icon>
+            <icon replace="DefaultMusicYears.png">special://skin/extras/icons/years.png</icon>
+            <icon replace="DefaultMusicTop100.png">special://skin/extras/icons/top100.png</icon>
+            <icon replace="DefaultMusicRecentlyAdded.png">special://skin/extras/icons/recentlyadded.png</icon>
+            <icon replace="DefaultMusicRecentlyPlayed.png">special://skin/extras/icons/recent.png</icon>
+            <icon replace="DefaultAddonVideo.png">special://skin/extras/icons/video-addons.png</icon>
+            <icon replace="DefaultAddonMusic.png">special://skin/extras/icons/songs.png</icon>
+            <icon replace="DefaultAddonProgram.png">special://skin/extras/icons/addons.png</icon>
+        </icons>
+        <action replace="ActivateWindow(3201)">ActivateWindow(1111)</action>
+        <action replace="ActivateWindow(3202)">ActivateWindow(1112)</action>
+        <action replace="ActivateWindow(3204)">ActivateWindow(1104)</action>
+        <action replace="ActivateWindow(3205)">ActivateWindow(1105)</action>
+    </overrides>
+
+    <!--
+      No <dialogs><subdialog> block: this skin switches between its six widget-slot
+      panes itself (grouplists 9300/9400/9500/9600/9700/11000, gated on
+      Window(Home).Property(skinshortcuts-Widget) via the skin-authored WidgetSelector
+      include) rather than using v3's dialog-reopen mechanism. properties.xml wires the
+      real per-slot control IDs (9451/9345/9346/9358/4591/11002, 310) directly to
+      type="widget"/type="background" buttons, which v3 supports without a subdialog.
+    -->
+
+    <contextmenu>true</contextmenu>
+
+</menus>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <!-- ============================================================
+         Passthrough widgets: these just include existing, unmodified
+         skin-authored content blocks (Includes_Home.xml) and are not
+         otherwise touched by the v2/v3 addon version.
+         ============================================================ -->
+    <template include="WeatherDailyInfoContent" templateonly="auto">
+        <controls>
+            <include>WeatherDailyItems</include>
+        </controls>
+    </template>
+
+    <template include="WeatherHourlyInfoContent" templateonly="auto">
+        <controls>
+            <include>WeatherHourlyItems</include>
+        </controls>
+    </template>
+
+    <template include="SystemInfoContent" templateonly="auto">
+        <controls>
+            <include>SystemInfoItems</include>
+        </controls>
+    </template>
+
+    <template include="SettingsInfoContent" templateonly="auto">
+        <controls>
+            <include>SettingsInfoItems</include>
+        </controls>
+    </template>
+
+    <!-- ============================================================
+         Classic single-widget layout (used outside the modern
+         multi-widget home menu layout)
+         ============================================================ -->
+    <template include="widget-classic">
+        <var name="content">
+            <value condition="widgetPath">$PROPERTY[widgetPath]</value>
+            <value>$VAR[DefWidgetContent]</value>
+        </var>
+        <var name="target">
+            <value condition="widgetTarget">$PROPERTY[widgetTarget]</value>
+            <value>$VAR[DefWidgetTarget]</value>
+        </var>
+        <var name="aspectratio">
+            <value condition="widgetAspectRatio">$PROPERTY[widgetAspectRatio]</value>
+            <value>keep</value>
+        </var>
+        <var name="isgto">
+            <value condition="widget=GTO">true</value>
+            <value>false</value>
+        </var>
+        <var name="widgetauto">
+            <value condition="widgetAuto=$NUMBER[5000]">5000</value>
+            <value condition="widgetAuto=$NUMBER[7000]">7000</value>
+            <value condition="widgetAuto=$NUMBER[10000]">10000</value>
+            <value condition="widgetAuto=$NUMBER[15000]">15000</value>
+            <value condition="widgetAuto=$NUMBER[20000]">20000</value>
+            <value condition="widgetAuto=$NUMBER[25000]">25000</value>
+        </var>
+        <var name="widgetclearlogothumb">
+            <value condition="widgetClearLogoThumb=no">false</value>
+            <value>true</value>
+        </var>
+        <var name="distance">
+            <value condition="widgetEdgeDistance=yes">30</value>
+            <value>10</value>
+        </var>
+        <var name="widgetlisttype">
+            <value condition="widgetListType">$PROPERTY[widgetListType]</value>
+            <value>list</value>
+        </var>
+        <controls>
+            <control type="$VAR[widgetlisttype]" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <description>Plugin Content Widget</description>
+                <left>70</left>
+                <right>70</right>
+                <height>297</height>
+                <onup>300</onup>
+                <onclick condition="$VAR[isgto]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
+                <ondown>300</ondown>
+                <onback>300</onback>
+                <onleft>301</onleft>
+                <onright>301</onright>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <autoscroll time="$VAR[widgetauto]">!Control.HasFocus(301) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto)) + System.IdleTime(1)</autoscroll>
+                <include>ScrolltimeWidgetsList</include>
+                <itemlayout width="178" height="257" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.poster">
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                    </include>
+                </itemlayout>
+                <focusedlayout width="178" height="257" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.poster.focus">
+                        <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="glow_left" value="-3"/>
+                        <param name="glow_top" value="0"/>
+                        <param name="glow_right" value="-2"/>
+                        <param name="glow_height" value="255"/>
+                    </include>
+                </focusedlayout>
+                <itemlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.square">
+                        <param name="height" value="257"/>
+                        <param name="aspectratio" value="$VAR[aspectratio]"/>
+                        <param name="distance" value="$VAR[distance]"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                    </include>
+                </itemlayout>
+                <focusedlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.square.focus">
+                        <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="aspectratio" value="$VAR[aspectratio]"/>
+                        <param name="distance" value="$VAR[distance]"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="glow_height" value="253"/>
+                    </include>
+                </focusedlayout>
+                <itemlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.fanart">
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                    </include>
+                </itemlayout>
+                <focusedlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.fanart.focus">
+                        <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="glow_left" value="6"/>
+                        <param name="glow_top" value="0"/>
+                        <param name="glow_right" value="7"/>
+                        <param name="glow_height" value="255"/>
+                    </include>
+                </focusedlayout>
+                <itemlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.thumb">
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="clearlogo" value="$VAR[widgetclearlogothumb]"/>
+                    </include>
+                </itemlayout>
+                <focusedlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.thumb.focus">
+                        <param name="id" value="301"/>
+                        <param name="height" value="257"/>
+                        <param name="height_reflection" value="257"/>
+                        <param name="top" value="238"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="clearlogo" value="$VAR[widgetclearlogothumb]"/>
+                        <param name="glow_left" value="6"/>
+                        <param name="glow_top" value="0"/>
+                        <param name="glow_right" value="7"/>
+                        <param name="glow_height" value="255"/>
+                    </include>
+                </focusedlayout>
+                <content limit="$VAR[DefWidgetLimit]" target="$VAR[target]" sortby="$PROPERTY[widgetSortby]" sortorder="$PROPERTY[widgetSort]" browse="$VAR[DefBrowse]">$VAR[content]</content>
+            </control>
+        </controls>
+    </template>
+
+    <!-- ============================================================
+         Featured single-widget layout (background-only, no visible list)
+         ============================================================ -->
+    <template include="widget-featured">
+        <var name="content">
+            <value condition="widgetPath">$PROPERTY[widgetPath]</value>
+            <value>$VAR[DefWidgetContent]</value>
+        </var>
+        <var name="target">
+            <value condition="widgetTarget">$PROPERTY[widgetTarget]</value>
+            <value>$VAR[DefWidgetTarget]</value>
+        </var>
+        <var name="isgto">
+            <value condition="widget=GTO">true</value>
+            <value>false</value>
+        </var>
+        <controls>
+            <control type="wraplist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <description>Widget</description>
+                <width>1</width>
+                <height>1</height>
+                <onup>300</onup>
+                <onclick condition="$VAR[isgto]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
+                <ondown>300</ondown>
+                <onback>300</onback>
+                <onleft>301</onleft>
+                <onright>301</onright>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <scrolltime tween="quadratic">0</scrolltime>
+                <include>Animation.FadeIn</include>
+                <include>Animation.FadeOut</include>
+                <itemlayout width="1" height="1"></itemlayout>
+                <focusedlayout width="1" height="1"></focusedlayout>
+                <content limit="$VAR[DefWidgetLimit]" target="$VAR[target]" sortby="$PROPERTY[widgetSortby]" sortorder="$PROPERTY[widgetSort]" browse="$VAR[DefBrowse]">$VAR[content]</content>
+            </control>
+        </controls>
+    </template>
+
+    <!-- ============================================================
+         Modern multi-widget layout, one output per widget slot (1-6).
+         Collapses v2's six near-identical widget-vertical.N templates
+         into a single suffix-driven definition.
+         id/idprefix below reproduce v2's "301{mainmenuid}{slot}"
+         container-numbering scheme via the addon's built-in per-item id.
+         ============================================================ -->
+    <template>
+        <output include="widget-vertical.1" idprefix="301" />
+        <output include="widget-vertical.2" idprefix="301" suffix=".2" />
+        <output include="widget-vertical.3" idprefix="301" suffix=".3" />
+        <output include="widget-vertical.4" idprefix="301" suffix=".4" />
+        <output include="widget-vertical.5" idprefix="301" suffix=".5" />
+        <output include="widget-vertical.6" idprefix="301" suffix=".6" />
+
+        <var name="ispvrlayout">
+            <value condition="widget=epg">true</value>
+            <value>false</value>
+        </var>
+        <var name="widgetlimit">
+            <value condition="widget=epg">5</value>
+            <value>$VAR[DefWidgetLimit]</value>
+        </var>
+        <var name="isnormallayout">
+            <value condition="widget=epg">false</value>
+            <value condition="widgetTarget=weather">false</value>
+            <value condition="widgetTarget=system">false</value>
+            <value condition="widget=mysubmenu">false</value>
+            <value>true</value>
+        </var>
+        <var name="issettingslayout">
+            <value condition="widget=settings">true</value>
+            <value>false</value>
+        </var>
+        <var name="issystemlayout">
+            <value condition="widgetTarget=system">true</value>
+            <value>false</value>
+        </var>
+        <var name="issubmenulayout">
+            <value condition="!suffix + widget=mysubmenu">true</value>
+            <value>false</value>
+        </var>
+        <var name="isweatherlayout">
+            <value condition="widgetTarget=weather">true</value>
+            <value>false</value>
+        </var>
+        <var name="isfullscreenwidget">
+            <value condition="widgetFullscreen=yes">true</value>
+            <value>false</value>
+        </var>
+        <var name="layoutheight">
+            <value condition="widgetaspect=SquareMedium">175</value>
+            <value condition="widgetaspect=SquareSmall">125</value>
+            <value condition="widget=mysubmenu">325</value>
+            <value condition="widgetFullscreen=yes">710</value>
+            <value>325</value>
+        </var>
+        <var name="layoutheight2">
+            <value condition="widgetaspect=SquareMedium">185</value>
+            <value condition="widgetaspect=SquareSmall">135</value>
+            <value condition="widget=mysubmenu">365</value>
+            <value condition="widgetFullscreen=yes">780</value>
+            <value>365</value>
+        </var>
+        <var name="labelisvisible">
+            <value condition="widget=mysubmenu">false</value>
+            <value condition="widgetTarget=weather">false</value>
+            <value condition="widgetTarget=system">false</value>
+            <value>true</value>
+        </var>
+        <var name="content">
+            <value condition="widgetPath">$PROPERTY[widgetPath]</value>
+            <value>$VAR[DefWidgetContent]</value>
+        </var>
+        <var name="isgto">
+            <value condition="widget=GTO">true</value>
+            <value>false</value>
+        </var>
+        <var name="target">
+            <value condition="widgetTarget">$PROPERTY[widgetTarget]</value>
+            <value>$VAR[DefWidgetTarget]</value>
+        </var>
+        <var name="widgetauto">
+            <value condition="widgetAuto=$NUMBER[5000]">5000</value>
+            <value condition="widgetAuto=$NUMBER[7000]">7000</value>
+            <value condition="widgetAuto=$NUMBER[10000]">10000</value>
+            <value condition="widgetAuto=$NUMBER[15000]">15000</value>
+            <value condition="widgetAuto=$NUMBER[20000]">20000</value>
+            <value condition="widgetAuto=$NUMBER[25000]">25000</value>
+        </var>
+        <var name="widgetlisttype">
+            <value condition="widgetListType">$PROPERTY[widgetListType]</value>
+            <value>fixedlist</value>
+        </var>
+        <var name="widgetclearlogothumb">
+            <value condition="widgetClearLogoThumb=no">false</value>
+            <value>true</value>
+        </var>
+        <var name="aspectratio">
+            <value condition="widgetAspectRatio">$PROPERTY[widgetAspectRatio]</value>
+            <value>keep</value>
+        </var>
+        <var name="distance">
+            <value condition="widgetEdgeDistance=yes">30</value>
+            <value>10</value>
+        </var>
+        <var name="orientation">
+            <value condition="widget=epg">vertical</value>
+            <value>horizontal</value>
+        </var>
+        <var name="widgetaspectcheck">
+            <value condition="widget=settings">Square</value>
+            <value condition="widgetTarget=system">Square</value>
+            <value condition="widgetaspect=ThumbnailPosterSmall">ThumbPoSmall</value>
+            <value condition="widgetaspect=ThumbnailSmall">ThumbSmall</value>
+            <value condition="widgetaspect=FanartSmall">FanSmall</value>
+            <value>Poster</value>
+        </var>
+        <var name="widgetaspectsubcheck">
+            <value condition="widgetaspect=SquareSmall">SqSmall</value>
+            <value condition="widgetaspect=SquareMedium">SqMedium</value>
+            <value>Square</value>
+        </var>
+
+        <controls>
+            <control type="group" id="$MATH[$PROPERTY[id] + 1000]">
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>Integer.IsGreater(Container($PROPERTY[id]).NumItems,0) | Container($PROPERTY[id]).IsUpdating</visible>
+                <control type="grouplist">
+                    <include content="widget.title.label" condition="!Skin.HasSetting(hidewidgettitle)">
+                        <param name="focusid" value="$PROPERTY[id]"/>
+                        <param name="idshort" value="$PROPERTY[suffix]"/>
+                        <param name="animation_condition" value="!Control.HasFocus($PROPERTY[id])" />
+                    </include>
+                </control>
+            </control>
+            <control type="$VAR[widgetlisttype]" id="$PROPERTY[id]">
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>Integer.IsGreater(Container($PROPERTY[id]).NumItems,0) | Container($PROPERTY[id]).IsUpdating | String.IsEqual(Container(300).ListItem.Property(widget$PROPERTY[suffix]),custom) | [!suffix + [String.IsEqual(Container(300).ListItem.Property(widget),mysubmenu) | String.Contains(Container(300).ListItem.Property(widget),weather)]]</visible>
+                <onclick condition="$VAR[isgto]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
+                <include content="DefMultiWidgetContainer">
+                    <param name="id" value="$PROPERTY[id]"/>
+                    <param name="backid" value="$PROPERTY[idprefix]1"/>
+                    <param name="height" value="$VAR[layoutheight]"/>
+                    <param name="height2" value="$VAR[layoutheight2]"/>
+                    <param name="idshort" value="$PROPERTY[suffix]"/>
+                    <param name="AutoTime" value="$VAR[widgetauto]"/>
+                    <param name="orientation" value="$VAR[orientation]"/>
+                    <param name="AutoScrollCondition" value="!Control.HasFocus($PROPERTY[id]) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto$PROPERTY[suffix])) + !String.IsEqual(Container(300).ListItem.Property(widgetListType),list) + System.IdleTime(1)"/>
+                    <param name="animation_condition" value="!Control.HasFocus($PROPERTY[id])" />
+                </include>
+                <!-- ItemLayouts -->
+                <include content="TemplateNormalItemLayout" condition="$VAR[isnormallayout]">
+                    <param name="shortcutsclearlogo" value="$VAR[widgetclearlogothumb]"/>
+                    <param name="aspectratio" value="$VAR[aspectratio]"/>
+                    <param name="distance" value="$VAR[distance]"/>
+                    <param name="Banner" value="$IF[$VAR[widgetaspectcheck]=Banner THEN true ELSE false]"/>
+                    <param name="Thumbnail" value="$IF[$VAR[widgetaspectcheck]=Thumbnail THEN true ELSE false]"/>
+                    <param name="Fanart" value="$IF[$VAR[widgetaspectcheck]=Fanart THEN true ELSE false]"/>
+                    <param name="FanartSmall" value="$IF[$VAR[widgetaspectcheck]=FanSmall THEN true ELSE false]"/>
+                    <param name="ThumbnailSmall" value="$IF[$VAR[widgetaspectcheck]=ThumbSmall THEN true ELSE false]"/>
+                    <param name="ThumbnailPosterSmall" value="$IF[$VAR[widgetaspectcheck]=ThumbPoSmall THEN true ELSE false]"/>
+                    <param name="Square" value="$IF[$VAR[widgetaspectcheck]=Square THEN true ELSE false]"/>
+                </include>
+                <include condition="$VAR[ispvrlayout]">TemplatePvrItemLayout</include>
+                <include content="TemplateWeatherItemLayout" condition="$VAR[isweatherlayout]">
+                    <param name="Fanart" value="$IF[$VAR[widgetaspectcheck]=Fanart THEN true ELSE false]"/>
+                    <param name="Square" value="$IF[$VAR[widgetaspectcheck]=Square THEN true ELSE false]"/>
+                </include>
+                <include condition="$VAR[issystemlayout]">TemplateSystemItemLayout</include>
+                <include content="TemplateSubmenuItemLayout" condition="$VAR[issubmenulayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                    <param name="shortcutsclearlogo" value="$VAR[widgetclearlogothumb]"/>
+                    <param name="aspectratio" value="$VAR[aspectratio]"/>
+                    <param name="distance" value="$VAR[distance]"/>
+                    <param name="SquareMedium" value="$IF[$VAR[widgetaspectsubcheck]=SqMedium THEN true ELSE false]"/>
+                    <param name="SquareSmall" value="$IF[$VAR[widgetaspectsubcheck]=SqSmall THEN true ELSE false]"/>
+                </include>
+                <!-- FocusLayouts -->
+                <include content="TemplateNormalFocusLayout" condition="$VAR[isnormallayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                    <param name="shortcutsclearlogo" value="$VAR[widgetclearlogothumb]"/>
+                    <param name="aspectratio" value="$VAR[aspectratio]"/>
+                    <param name="distance" value="$VAR[distance]"/>
+                    <param name="Banner" value="$IF[$VAR[widgetaspectcheck]=Banner THEN true ELSE false]"/>
+                    <param name="Thumbnail" value="$IF[$VAR[widgetaspectcheck]=Thumbnail THEN true ELSE false]"/>
+                    <param name="Fanart" value="$IF[$VAR[widgetaspectcheck]=Fanart THEN true ELSE false]"/>
+                    <param name="FanartSmall" value="$IF[$VAR[widgetaspectcheck]=FanSmall THEN true ELSE false]"/>
+                    <param name="ThumbnailSmall" value="$IF[$VAR[widgetaspectcheck]=ThumbSmall THEN true ELSE false]"/>
+                    <param name="ThumbnailPosterSmall" value="$IF[$VAR[widgetaspectcheck]=ThumbPoSmall THEN true ELSE false]"/>
+                    <param name="Square" value="$IF[$VAR[widgetaspectcheck]=Square THEN true ELSE false]"/>
+                </include>
+                <include content="TemplatePvrFocusLayout" condition="$VAR[ispvrlayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                </include>
+                <include content="TemplateWeatherFocusLayout" condition="$VAR[isweatherlayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                    <param name="Fanart" value="$IF[$VAR[widgetaspectcheck]=Fanart THEN true ELSE false]"/>
+                    <param name="Square" value="$IF[$VAR[widgetaspectcheck]=Square THEN true ELSE false]"/>
+                </include>
+                <include content="TemplateSystemFocusLayout" condition="$VAR[issystemlayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                </include>
+                <include content="TemplateSubmenuFocusLayout" condition="$VAR[issubmenulayout]">
+                    <param name="shortcutsid" value="$PROPERTY[id]"/>
+                    <param name="shortcutsclearlogo" value="$VAR[widgetclearlogothumb]"/>
+                    <param name="aspectratio" value="$VAR[aspectratio]"/>
+                    <param name="distance" value="$VAR[distance]"/>
+                    <param name="SquareMedium" value="$IF[$VAR[widgetaspectsubcheck]=SqMedium THEN true ELSE false]"/>
+                    <param name="SquareSmall" value="$IF[$VAR[widgetaspectsubcheck]=SqSmall THEN true ELSE false]"/>
+                </include>
+                <content limit="$VAR[widgetlimit]" target="$VAR[target]" sortby="$PROPERTY[widgetSortby]" sortorder="$PROPERTY[widgetSort]" browse="$VAR[DefBrowse]">$VAR[content]</content>
+            </control>
+            <!-- InfoSub -->
+            <control type="group" id="$MATH[$PROPERTY[id] + 1100]">
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>[Integer.IsGreater(Container($PROPERTY[id]).NumItems,0) | Container($PROPERTY[id]).IsUpdating] + [[ $VAR[isfullscreenwidget] | [Skin.HasSetting(homemenu.netflix) + Integer.IsGreater(Container($PROPERTY[id]).NumItems,0)]] | [ !$EXP[Widget2Enabled] + !$EXP[Widget3Enabled] + !$EXP[Widget4Enabled] + !$EXP[Widget5Enabled] + !$EXP[Widget6Enabled] ]]</visible>
+                <include content="Animation.FadeOutHomeFullscreenWidget">
+                    <param name="condition" value="!Control.HasFocus($PROPERTY[id])"/>
+                </include>
+                <control type="grouplist">
+                    <include content="FullScreenInfoSub" condition="$VAR[isnormallayout] | $VAR[ispvrlayout]">
+                        <param name="id" value="$PROPERTY[id]"/>
+                        <param name="labelisvisible" value="$VAR[labelisvisible]"/>
+                    </include>
+                </control>
+                <control type="grouplist">
+                    <include condition="$VAR[isweatherlayout]">InfoSubWidgetWeather</include>
+                </control>
+                <control type="grouplist">
+                    <include condition="$VAR[issystemlayout]" content="InfoSubWidgetSystem">
+                        <param name="issettingslayout" value="$VAR[issettingslayout]"/>
+                        <param name="id" value="$PROPERTY[id]"/>
+                    </include>
+                </control>
+                <control type="grouplist">
+                    <include content="ClearArtInfoSub" condition="$VAR[isnormallayout]">
+                        <param name="id" value="$PROPERTY[id]"/>
+                    </include>
+                </control>
+            </control>
+        </controls>
+    </template>
+
+    <!-- ============================================================
+         Fixedlist single-widget layout (classic/vertical home menus)
+         ============================================================ -->
+    <template include="widget-vertical">
+        <var name="content">
+            <value condition="widgetPath">$PROPERTY[widgetPath]</value>
+            <value>$VAR[DefWidgetContent]</value>
+        </var>
+        <var name="target">
+            <value condition="widgetTarget">$PROPERTY[widgetTarget]</value>
+            <value>$VAR[DefWidgetTarget]</value>
+        </var>
+        <var name="aspectratio">
+            <value condition="widgetAspectRatio">$PROPERTY[widgetAspectRatio]</value>
+            <value>keep</value>
+        </var>
+        <var name="isgto">
+            <value condition="widget=GTO">true</value>
+            <value>false</value>
+        </var>
+        <var name="widgetclearlogothumb">
+            <value condition="widgetClearLogoThumb=no">false</value>
+            <value>true</value>
+        </var>
+        <var name="distance">
+            <value condition="widgetEdgeDistance=yes">30</value>
+            <value>10</value>
+        </var>
+        <var name="widgetauto">
+            <value condition="widgetAuto=$NUMBER[5000]">5000</value>
+            <value condition="widgetAuto=$NUMBER[7000]">7000</value>
+            <value condition="widgetAuto=$NUMBER[10000]">10000</value>
+            <value condition="widgetAuto=$NUMBER[15000]">15000</value>
+            <value condition="widgetAuto=$NUMBER[20000]">20000</value>
+            <value condition="widgetAuto=$NUMBER[25000]">25000</value>
+        </var>
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>!String.Contains(Container(300).ListItem.Property(widget),weather)</visible>
+                <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301) + !Skin.HasSetting(widgets.fade)">Conditional</animation>
+                <autoscroll time="$VAR[widgetauto]">!Control.HasFocus(301) + !String.IsEmpty(Container(300).ListItem.Property(widgetAuto)) + System.IdleTime(1)</autoscroll>
+                <top>330</top>
+                <left>518</left>
+                <width>1876</width>
+                <height>365</height>
+                <onright>noop</onright>
+                <onback condition="!Integer.IsEqual(Container(301).Position,0) | Container(301).HasPrevious">PageUp</onback>
+                <onback condition="Integer.IsEqual(Container(301).Position,0) + !Container(301).HasPrevious">300</onback>
+                <onleft>300</onleft>
+                <onup>300</onup>
+                <ondown>300</ondown>
+                <onclick condition="$VAR[isgto]">RunPlugin(plugin://script.service.gto?action=info&amp;item=$INFO[ListItem.Property(Item)])</onclick>
+                <focusposition>0</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <pagecontrol>60</pagecontrol>
+                <viewtype label="536">list</viewtype>
+                <include>ScrolltimeWidgetsList</include>
+                <itemlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.poster">
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </itemlayout>
+                <itemlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.square">
+                        <param name="aspectratio" value="$VAR[aspectratio]"/>
+                        <param name="distance" value="$VAR[distance]"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </itemlayout>
+                <itemlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.fanart">
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </itemlayout>
+                <itemlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.thumb">
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="clearlogo" value="$VAR[widgetclearlogothumb]"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </itemlayout>
+                <focusedlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) | String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail)] + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.poster.focus">
+                        <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </focusedlayout>
+                <focusedlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) | String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.square.focus">
+                        <param name="id" value="301"/>
+                        <param name="aspectratio" value="$VAR[aspectratio]"/>
+                        <param name="distance" value="$VAR[distance]"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                    </include>
+                </focusedlayout>
+                <focusedlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Fanart) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.fanart.focus">
+                        <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="height" value="325"/>
+                        <param name="glow_left" value="10"/>
+                        <param name="glow_right" value="10"/>
+                    </include>
+                </focusedlayout>
+                <focusedlayout height="325" width="562" condition="String.IsEqual(Container(300).ListItem.Property(widgetaspect),Thumbnail) + !String.IsEqual(Container(300).ListItem.Property(widget),system)">
+                    <include content="include.widget.thumb.focus">
+                        <param name="id" value="301"/>
+                        <param name="reflections" value="Skin.HasSetting(home.widgets.show.reflections)"/>
+                        <param name="clearlogo" value="$VAR[widgetclearlogothumb]"/>
+                        <param name="height" value="325"/>
+                        <param name="glow_left" value="10"/>
+                        <param name="glow_right" value="10"/>
+                    </include>
+                </focusedlayout>
+                <content limit="$VAR[DefWidgetLimit]" target="$VAR[target]" sortby="$PROPERTY[widgetSortby]" sortorder="$PROPERTY[widgetSort]" browse="$VAR[DefBrowse]">$VAR[content]</content>
+            </control>
+        </controls>
+    </template>
+
+</templates>
