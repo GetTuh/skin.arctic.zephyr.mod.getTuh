@@ -155,20 +155,20 @@
     </group>
 
     <group name="videowidgetsourcesgroup" label="32030">
-        <content source="library" target="video" />
+        <content source="nodes" target="video" />
         <group name="videoplaylistswidgets" label="32040" flat="true">
-            <content source="playlists" target="videos" />
+            <content source="playlists" target="video" />
         </group>
         <group name="videoaddonswidgets" label="32010" flat="true">
             <content source="addons" target="videos" />
         </group>
         <group name="videosourceswidgets" label="32075" flat="true">
-            <content source="sources" target="videos" />
+            <content source="sources" target="video" />
         </group>
     </group>
 
     <group name="musicwidgetsourcesgroup" label="32031">
-        <content source="library" target="music" />
+        <content source="nodes" target="music" />
         <group name="musicplaylistswidgets" label="32040" flat="true">
             <content source="playlists" target="music" />
         </group>

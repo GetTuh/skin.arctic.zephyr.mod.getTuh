@@ -42,9 +42,8 @@
         <item name="settings">
             <label>10004</label>
             <icon>special://skin/extras/icons/settings.png</icon>
-            <protect type="action" heading="31176" message="31177">
-                <action>ActivateWindow(Settings)</action>
-            </protect>
+            <action>ActivateWindow(Settings)</action>
+            <protect type="action" heading="31176" message="31177" />
         </item>
         <item name="power">
             <label>33060</label>
@@ -324,16 +323,16 @@
         </group>
 
         <group name="videosgroup" label="32030">
-            <content source="library" target="video" />
+            <content source="nodes" target="video" />
             <group name="videoplaylists" label="32040" flat="true">
-                <content source="playlists" target="videos" />
+                <content source="playlists" target="video" />
             </group>
             <group name="videoaddonsgroup" label="32010">
                 <shortcut name="videoaddonssub" label="1037" type="32014" icon="DefaultAddonVideo.png"><action>ActivateWindow(Videos,Addons,return)</action></shortcut>
                 <content source="addons" target="videos" />
             </group>
             <group name="videosourcesgroup" label="32075" flat="true">
-                <content source="sources" target="videos" />
+                <content source="sources" target="video" />
             </group>
             <group name="commonplaylists" label="$LOCALIZE[31434]">
                 <group name="movieplaylists" label="$LOCALIZE[342]">
@@ -355,7 +354,7 @@
         </group>
 
         <group name="musicgroup" label="32031">
-            <content source="library" target="music" />
+            <content source="nodes" target="music" />
             <group name="musicplaylists" label="32040" flat="true">
                 <content source="playlists" target="music" />
             </group>

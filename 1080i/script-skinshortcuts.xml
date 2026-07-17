@@ -238,7 +238,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>126</label>
@@ -291,13 +291,13 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>[String.IsEqual(Window.Property(groupname),mainmenu) + String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))] | String.IsEqual(Window(Home).Property(Backg),yes)</visible>
+                    <visible>[String.IsEqual(Window.Property(menuname),mainmenu) + String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))] | String.IsEqual(Window(Home).Property(Backg),yes)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
                     <height>66</height>
                     <label>31112</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -441,7 +441,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 1</label>
                     <label2>$VAR[LabelWidgetShortcutsName]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -464,7 +464,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -479,7 +479,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -491,7 +491,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -507,7 +507,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -520,7 +520,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -534,7 +534,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -544,7 +544,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -555,7 +555,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>$LOCALIZE[31340]</label>
@@ -569,7 +569,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>Skin.HasSetting(home.vertical)</enable>
@@ -584,7 +584,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <visible>!$EXP[HomeIsVertical] + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
@@ -611,7 +611,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>Skin.HasSetting(home.vertical.widgets)</enable>
@@ -629,7 +629,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 2</label>
                     <label2>$VAR[LabelWidgetShortcutsName2]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -652,7 +652,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <onclick>SetProperty(customProperty,widgetFullscreen.2)</onclick>
@@ -667,7 +667,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType2]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -679,7 +679,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -695,7 +695,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio2]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -708,7 +708,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance2]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -721,7 +721,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy2]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -731,7 +731,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -741,7 +741,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>[Skin.HasSetting(home.vertical.widgets) | [Skin.HasSetting(home.modernwidgets)  + Skin.HasSetting(home.vertical.widgets)]] + !String.IsEqual(Container(211).ListItem.Property(widgetListType.2),list)</enable>
@@ -756,7 +756,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
 
@@ -782,7 +782,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>126</label>
@@ -799,7 +799,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 3</label>
                     <label2>$VAR[LabelWidgetShortcutsName3]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -822,7 +822,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <onclick>SetProperty(customProperty,widgetFullscreen.3)</onclick>
@@ -837,7 +837,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType3]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -849,7 +849,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -865,7 +865,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio3]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -877,7 +877,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance3]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -890,7 +890,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy3]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -900,7 +900,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -911,7 +911,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>[Skin.HasSetting(home.vertical.widgets) | [Skin.HasSetting(home.modernwidgets)  + Skin.HasSetting(home.vertical.widgets)]] + !String.IsEqual(Container(211).ListItem.Property(widgetListType.3),list)</enable>
@@ -927,7 +927,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
 
@@ -953,7 +953,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>126</label>
@@ -970,7 +970,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 4</label>
                     <label2>$VAR[LabelWidgetShortcutsName4]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -993,7 +993,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <onclick>SetProperty(customProperty,widgetFullscreen.4)</onclick>
@@ -1008,7 +1008,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType4]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1020,7 +1020,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1036,7 +1036,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio4]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1049,7 +1049,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance4]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1062,7 +1062,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy4]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1072,7 +1072,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -1083,7 +1083,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>[Skin.HasSetting(home.vertical.widgets) | [Skin.HasSetting(home.modernwidgets)  + Skin.HasSetting(home.vertical.widgets)]] + !String.IsEqual(Container(211).ListItem.Property(widgetListType.4),list)</enable>
@@ -1099,7 +1099,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
 
@@ -1125,7 +1125,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>126</label>
@@ -1142,7 +1142,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 5</label>
                     <label2>$VAR[LabelWidgetShortcutsName5]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1165,7 +1165,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <onclick>SetProperty(customProperty,widgetFullscreen.5)</onclick>
@@ -1180,7 +1180,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType5]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1192,7 +1192,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1208,7 +1208,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio5]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1221,7 +1221,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance5]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1234,7 +1234,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy5]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1244,7 +1244,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -1255,7 +1255,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>[Skin.HasSetting(home.vertical.widgets) | [Skin.HasSetting(home.modernwidgets)  + Skin.HasSetting(home.vertical.widgets)]] + !String.IsEqual(Container(211).ListItem.Property(widgetListType.5),list)</enable>
@@ -1271,7 +1271,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
 
@@ -1297,7 +1297,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>126</label>
@@ -1314,7 +1314,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31266] 6</label>
                     <label2>$VAR[LabelWidgetShortcutsName6]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1339,7 +1339,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31411]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <onclick>SetProperty(customProperty,widgetFullscreen.6)</onclick>
@@ -1354,7 +1354,7 @@
                     <height>66</height>
                     <label>31261</label>
                     <label2>$VAR[LabelWidgetType6]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1366,7 +1366,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31330]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1382,7 +1382,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31401]</label>
                     <label2>$VAR[LabelAspectRatio6]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1395,7 +1395,7 @@
                     <height>66</height>
                     <label>$LOCALIZE[31297]$LOCALIZE[31453]</label>
                     <label2>$VAR[LabelEdgeDistance6]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1408,7 +1408,7 @@
                     <height>66</height>
                     <label>581</label>
                     <label2>$VAR[LabelSortBy6]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
@@ -1418,7 +1418,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <label>580</label>
@@ -1429,7 +1429,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <enable>[Skin.HasSetting(home.vertical.widgets) | [Skin.HasSetting(home.modernwidgets)  + Skin.HasSetting(home.vertical.widgets)]] + !String.IsEqual(Container(211).ListItem.Property(widgetListType.6),list)</enable>
@@ -1445,7 +1445,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtonsGradient</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !$EXP[HomeIsCleanMinimal] + !$EXP[HomeIsSpotlight] + !$EXP[HomeIsModern]</visible>
                 </control>
             </control>
         </control>

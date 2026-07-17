@@ -11,37 +11,37 @@
     </variable>
 
     <variable name="LabelWidgetShortcutsName">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel))">$INFO[Container(211).ListItem.Property(widgetLabel)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
 
     <variable name="LabelWidgetShortcutsName2">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.2))">$INFO[Container(211).ListItem.Property(widgetName.2)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel.2))">$INFO[Container(211).ListItem.Property(widgetLabel.2)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background.2))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
 
     <variable name="LabelWidgetShortcutsName3">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.3))">$INFO[Container(211).ListItem.Property(widgetName.3)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel.3))">$INFO[Container(211).ListItem.Property(widgetLabel.3)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background.3))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
 
     <variable name="LabelWidgetShortcutsName4">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.4))">$INFO[Container(211).ListItem.Property(widgetName.4)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel.4))">$INFO[Container(211).ListItem.Property(widgetLabel.4)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background.4))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
 
     <variable name="LabelWidgetShortcutsName5">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.5))">$INFO[Container(211).ListItem.Property(widgetName.5)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel.5))">$INFO[Container(211).ListItem.Property(widgetLabel.5)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background.5))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
 
     <variable name="LabelWidgetShortcutsName6">
-        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.6))">$INFO[Container(211).ListItem.Property(widgetName.6)]</value>
+        <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabel.6))">$INFO[Container(211).ListItem.Property(widgetLabel.6)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background.6))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
@@ -601,7 +601,7 @@
     </variable>
 
     <variable name="WidgetLabel">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel))">$INFO[Container(300).ListItem.Property(widgetLabel)]</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
@@ -849,37 +849,37 @@
     </variable>
 
     <variable name="WidgetLabelWidgets0">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel))">$INFO[Container(300).ListItem.Property(widgetLabel)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets1">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel))">$INFO[Container(300).ListItem.Property(widgetLabel)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets2">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.2))">$INFO[Container(300).ListItem.Property(widgetName.2)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel.2))">$INFO[Container(300).ListItem.Property(widgetLabel.2)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets3">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.3))">$INFO[Container(300).ListItem.Property(widgetName.3)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel.3))">$INFO[Container(300).ListItem.Property(widgetLabel.3)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets4">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.4))">$INFO[Container(300).ListItem.Property(widgetName.4)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel.4))">$INFO[Container(300).ListItem.Property(widgetLabel.4)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets5">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.5))">$INFO[Container(300).ListItem.Property(widgetName.5)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel.5))">$INFO[Container(300).ListItem.Property(widgetLabel.5)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
     <variable name="WidgetLabelWidgets6">
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName.6))">$INFO[Container(300).ListItem.Property(widgetName.6)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetLabel.6))">$INFO[Container(300).ListItem.Property(widgetLabel.6)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
