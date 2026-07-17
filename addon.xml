@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic.zephyr.mod.gettuh" version="3.0.4" name="Arctic: Zephyr - Reloaded (GetTuh)" provider-name="jurialmunkey, beatmasterrs, GetTuh">
+<addon id="skin.arctic.zephyr.mod.gettuh" version="3.0.5" name="Arctic: Zephyr - Reloaded (GetTuh)" provider-name="jurialmunkey, beatmasterrs, GetTuh">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
         <import addon="script.skinshortcuts" version="3.0.1"/>
